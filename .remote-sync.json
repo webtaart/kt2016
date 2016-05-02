@@ -1,0 +1,13 @@
+{
+  "transport": "ftp",
+  "hostname": "46.21.173.241",
+  "port": 21,
+  "username": "youngin169",
+  "password": "kyK-rZS-2kL-NWg",
+  "target": "/domains/kt2016.be/public_html",
+  "ignore": [
+    ".remote-sync.json",
+    ".git/**",
+    "README.md"
+  ]
+}
