@@ -1,0 +1,500 @@
+@charset "UTF-8";
+
+/*
+TEXT
+font-family: 'Exo', sans-serif;
+font-weight: 100 - 400;
+
+HEADERS
+font-family: 'Bitter', serif;
+font-weight: 400 - 700;
+
+*/
+
+
+/*
+COLOR for TEXT and BACKGROUND
+
+Transparent	background-color: rgba(242,245,246,0.95);
+
+Extended palette from Illustrator files	
+	
+GREY	--> #COLOR		-->	used for 
+light:		#F2F5F6;		background elements + nav a:hover
+accent:		#D7E0E5;		background nav + elements a:hover
+accent:		#5F666A;		a + forms
+dark:		#2F3335;		text
+
+BLUE
+light:		#E1E5E7;		
+accent:		#A6B1B7;		footer
+accent:		#505E66;		
+dark:		#1B1F22;		H1
+
+PURPLE
+light:		#E7DFE6;
+accent:		#B79EB4;
+accent:		#664661;
+dark:		#221720;		< H2
+
+GREEN
+light:		#E4E7E1;
+accent:		#AFB7A6;
+accent:		#5B6650;
+dark:		#3D4436;
+
+
+/* ---------------------------------- */
+/*           MAIN STYLES              */
+/* ---------------------------------- */
+
+
+@media screen{
+* {
+	/* reset all default padding and margins */
+	margin:0px;
+	padding:0px;
+}
+	
+html{
+	font-family: 'Exo', sans-serif;
+	font-weight: 400;
+	color: #2F3335;
+}
+
+body{
+    background-color: #B79EB4;
+}
+
+/* Font Size */
+h1 {
+	font-family: 'Bitter', serif;
+	font-weight:700;
+    font-size: 2.5em; /* 40px/16=2.5em */
+    padding:1.5em 0 0.875em 0; /* 40px/16=2.5em */
+    border-bottom:1px #000;
+}
+    
+h1:after
+{
+    content:' ';
+    display:block;
+    border:1px double;
+    width: 10%;
+    margin-top: 0.875em; 
+
+    padding: 0.00875em;
+    margin-left: auto;
+    margin-right: auto;
+}
+    
+h2 {
+	font-family: 'Bitter', serif;
+	font-weight:400;
+    font-size: 1.875em; /* 30px/16=1.875em */
+    padding:1.875em 0 0  0;
+}
+
+p {
+    font-size: 0.875em; /* 14px/16=0.875em */
+    padding:0.875em 0 0.875em 0;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;   
+}
+
+a{
+	color:#5F666A;
+	text-decoration:none;
+}
+a:hover{
+	color:#D7E0E5;
+}
+
+form{
+}
+input{
+	color:#5F666A;
+	font-weight:300;
+	background-color:#D7E0E5;
+	border:none;
+	padding:10px;
+	margin:10px;
+	font-family: 'Exo', sans-serif;
+}
+
+/* ---------------------------------- */
+/*             TABLES                 */
+/* ---------------------------------- */
+
+td, th{
+	padding:1em;
+}
+
+th{
+	background-color:#AFB7A6;
+}
+
+tr:nth-child(even) {background-color: #F2F5F6}
+tr:nth-child(odd) {background-color: #E4E7E1}
+
+table{
+	width: 100%;
+	text-align: left;
+	border: 0 solid #CCC;
+    
+}
+	
+/* ---------------------------------- */
+/*             DEBUG                  */
+/* ---------------------------------- */
+/*
+div{
+	border-style:dashed;
+	border-color:#096;
+	border-width:1px;
+}
+*/
+.clear{
+	clear:both;
+}
+
+/* ---------------------------------- */
+/*             HEADER                 */
+/* do not define "header{}"           */
+/* since used in sections as well.    */
+/* ---------------------------------- */
+    
+#hero{
+	height:100vh;	/* screen height */
+}
+#hero-logo{
+	position:absolute;
+	top:50%;
+	left:50%;
+}
+#hero-logo img{
+	width:380px;
+	margin: -200px 0 0 -190px;
+}
+
+#hero-bg{
+    z-index: -99;
+    position:absolute;
+    background-color:#FFF;
+    left:50%;
+    width:380px;
+    margin: 0 0 0 -190px;
+}    
+/* ---------------------------------- */
+/*              NAV                   */
+/* ---------------------------------- */
+
+nav{
+    background-color: rgba(215,224,229,1);
+}
+
+nav ul{
+	margin:0;
+	margin-left:-2.8em; /* get rid of the 2*1.4em indentation */
+	text-align:center;
+}
+nav li{
+	padding:0;
+	list-style:none;
+	font-size:1.4em;
+}
+nav a{
+	color:#2F3335;
+}
+nav a:hover{
+	color:#F2F5F6;
+}
+    
+.active{
+    color:#FE3;
+}
+    
+/* nav-mobile */
+/* use when screen is mobile ->> work in progress */
+#nav-mobile{
+	display:none;
+	position: absolute;
+	width: 100%;
+	top:0px;
+}
+/* nav-home - visible only on home / hero */
+/* fade out when scroll down */
+#nav-home{
+	/*display:none;*/
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+   	border-top:#A6B1B7 solid;
+}
+#nav-home ul{
+}
+#nav-home li{
+	padding:1em;
+	display:inline-block;
+}
+
+/* nav-main 
+    will show at to of screen
+    only when nav-home is faded out
+    included a smaller logo in the center
+*/
+#nav-main{
+    display: none;
+    position: fixed;
+    width: 100%;
+    top: -0px;
+    z-index:999;
+    border-bottom:3px #A6B1B7 solid;
+    height: inherit;
+}
+#nav-main li{
+    float:none;
+    display: inline-block;
+}
+.nav-main-left{padding: 0 1em 1em 0;}
+.nav-main-center{
+    display: none;
+    margin-top: 0;
+    padding: 0 0 0 0; 
+    margin: 0;}
+.nav-main-right{padding: 1em 0 1em 1em;}
+.nav-main-center img{
+    width:260px;
+    margin: 0.4em 0 -1em 0 ;
+}
+
+
+
+/* ---------------------------------- */
+/*             UP & DOWN              */
+/* ---------------------------------- */
+
+#nav_down, #nav_up{
+    top:65%;
+    position:fixed;
+	z-index:999;
+}
+#nav_down{
+	margin-left: 2.40em;
+	left:0;
+}
+#nav_up{
+	margin-right: 2.40em;
+	right:0;
+}
+
+/* ---------------------------------- */
+/*             MAIN CONTENT           */
+/* ---------------------------------- */
+
+/* WRAPPER */
+
+#wrapper{
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+    top: 100%;
+}
+section{ 
+/* about / agenda / workshops / music / beurzen */
+/* reset in the footer section */
+	float: left;
+	width:70%;
+    margin:0;
+    padding: 3% 15% 3% 15%;
+    
+    text-align:center;
+    -moz-text-align-last: center; /* Code for Firefox */
+    text-align-last: center;	
+}
+    
+#info{
+    background-color: rgba(242,245,246,0.95);  
+}
+    
+#live header{
+    padding: 3% 0 0 0; 
+    margin: 0;
+    background-color: rgba(242,245,246,0.95);
+}
+#live footer{
+    padding: 0 0 3% 0; 
+    margin: 0;
+    background-color: rgba(242,245,246,0.95);
+}
+
+#photos{
+    background-color: rgba(242,245,246,0.95);
+}
+    
+article{
+    float: left;
+    width: 48%;
+    padding: 1%;
+}
+article header{
+    width: 50%;
+}
+article section{
+    width: 48%;
+    padding: 0;
+    margin: 0 1%;
+}
+article section p{
+    width: 100%;
+    text-align:justify;
+    -moz-text-align-last: justify; /* Code for Firefox */
+    text-align-last: justify;		    
+}
+    
+article aside{
+    margin: 1%;
+    padding: 1em;
+}
+article aside img{
+    width:48%;
+    float: right;
+    height: 100%;
+}
+        
+#music{
+    width: 100%;
+    padding: 3% 0% 3% 0%;
+    background-color: rgba(242,245,246,0.95);
+}
+
+#video{
+    background-color: rgba(242,245,246,0.95);
+}
+    
+.embed-container {
+position: relative;
+padding-bottom: 56.25%; /* 16/9 ratio */
+padding-top: 30px; /* IE6 workaround*/
+height: 0;
+overflow: hidden;
+}
+  
+
+/* aside */
+aside p, aside h1{
+    padding: 1em 0 0 0;
+	text-align:center;
+    -moz-text-align-last: center; /* Code for Firefox */
+    text-align-last: center;		
+}
+aside h1:after{
+    border: 0;
+}
+
+/* ---------------------------------- */
+/*             FOOTER                 */
+/* do not define "footer{}"           */
+/* since used in sections as well.    */
+/* ---------------------------------- */
+#footer{
+	width:100%;
+    height:inherit;
+    display: block;
+    clear: both;
+    color: #AFB7A6;
+}
+#footer-section{
+	float: left;
+	width:100%;
+    margin:0;
+    padding: 0;
+}
+#social, #contact, #signup{ /*sponsor + address + signup */
+	float:left;
+	width:33.333%;
+	padding:0;
+	font-family: 'Exo', sans-serif;
+}
+    
+.fa {
+    margin: 5px;
+}
+
+#footer h3{ /* small titles : sponsor / address / signup */
+	text-align:center;
+    padding: 1em 0 2em 0;
+}
+
+
+#contact address{
+	font-style:normal;
+	font-weight:400;
+}
+#contact address strong{
+    font-size: 2em;
+    font-weight: 700;
+}
+    
+#signup form, #signup a{
+	text-align:center;
+    color: #AFB7A6;
+    font-weight:400;
+}
+#signup a:hover{color: #E4E7E1;}
+	
+#credits{
+	margin-left:auto;
+	margin-right:auto;
+	padding:1% 0;
+	width:100%;
+	text-align:center;
+	height:2em;
+	font-weight:100;
+	font-size:0.8em;
+}
+
+
+/* ---------------------------------- */
+/*             ZIGZAG                 */
+/* or perhaps this one: http://jsfiddle.net/861gjx0b/2/
+/* ---------------------------------- */
+
+.zz {
+  position: relative;
+  width: 100%;
+  height: 250px;
+}
+.zz:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -10px;
+  width: 100%;
+  height: 10px;
+}
+
+
+.zzfooter {
+  background: #1B1F22;
+}
+.zzfooter:before {
+  background:
+    linear-gradient(
+      45deg, transparent 33.333%,
+      #1B1F22 33.333%, #1B1F22 66.667%,
+      transparent 66.667%
+    ),
+    linear-gradient(
+      -45deg, transparent 33.333%,
+      #1B1F22 33.333%, #1B1F22 66.667%,
+      transparent 66.667%
+    );
+
+  background-size: 20px 40px;
+}
+
+
+} /* close media screen */
