@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>K &#38; T</title>
-    <link href='http://fonts.googleapis.com/css?family=Bitter:400,700|Exo:100,400' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
     <script src="js/jquery.min.js" type="text/javascript"></script>
 
     <!-- social icons with font awesome -->
@@ -12,13 +12,17 @@
     <!-- background using backstretch.js
     more info on http://srobbin.com/jquery-plugins/backstretch/ -->
     <script src="js/backstretch.js" type="text/javascript"></script>
+    <script src="js/jquery.countdown.min.js" type="text/javascript"></script>
     <link href="css/style.css" rel="stylesheet" type="text/css">
+
+
 
 </head>
 
 <body>
 
 <header id="hero" class="">
+    <!-- script backstretch -->
     <script>
     // hero backstretch
     // loading a big image in the background
@@ -26,14 +30,25 @@
               "gfx/bg1.jpg"
           ], {duration: 100000, fade: 750});
     </script>
-
-
 </header>
-    <div id="hero-bg"></div>
-	<div id="hero-logo" class="logo-min">
-        <img src="gfx/kt2016.svg" />
-	</div>
-	<div class="clear"></div>
-    </div>
+
+<section id="container">
+	<div id="kt_logo" class="logo-min">
+      <img src="gfx/kt2016.svg" />
+  </div>
+  <div id="countdown">
+    <p>shit is getting real</p>
+    <p id="teller"></p>
+  </div>
+  <script type="text/javascript">
+   $("#teller")
+     .countdown("2016/09/02", function(event) {
+     $(this).text(
+       event.strftime('%D days %H:%M:%S')
+       );
+     });
+  </script>
+
+</section> <!-- end container -->
 </body>
 </html>
