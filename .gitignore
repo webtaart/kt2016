@@ -1,6 +1,11 @@
 # Ignore configuration files that may contain sensitive information.
 sites/*/*settings*.php
 
+# Ignore atom settings files
+.remote-sync.json
+.ftpconfig
+
+
 # Ignore paths that contain generated content.
 files/
 sites/*/files
