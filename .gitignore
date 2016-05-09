@@ -39,3 +39,5 @@ xmlrpc.php
 /profiles
 /scripts
 /themes
+
+*.codekit
