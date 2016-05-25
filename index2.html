@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+<!--
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+-->
+    <title>Katrien &amp; Tanguy</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="fonts/Salome/stylesheet.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.18.0/mapbox-gl.css' rel='stylesheet' />
+
+
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#home">K &amp; T</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#when">When</a></li>
+            <li><a href="#what">What</a></li>
+            <li><a href="#rsvp">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+
+<!--parallax 1 -->
+<div class=" bg-1">
+  <div class="jumbotron" id="home">
+  <div class="container-fluid"> <!-- nested container -->
+        <div class="row" data-spy="affix" data-offset-top="400" data-offset-bottom="1000">
+          <div class="col-md-6 col-xs-12 content-main">
+           <h1 class="text-xs-center">Katrien &amp; Tanguy</br> trouwen</h1>
+           <p class="lead text-sm-center">
+             een paragraaf tekst die toelichting geeft over onze trouw plannen. eventueel met twee regels tekst.
+           </p>
+           <p class="lead text-xs-center">shit is getting real in<br/>
+              <span id="teller"></span></p>
+          </div>
+          <div class="col-md-6 hidden-sm hidden-xs content-secondary">
+            <img class="showcase-img" src="img/kt2016.svg" alt="kt2016.be Logo Vector" />
+          </div>
+        </div>
+    </div><!-- /.container -->
+  </div><!-- /.jumbotron -->
+
+
+<!-- add space -->
+<div class="devider"></div>
+
+
+    <section id="when" class="container-fluid">
+      			<ul class="items">
+              <li class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 text-xs-left text-sm-center">
+               <img  class="img-responsive hidden-xs" src="icons/signatures.svg">
+               <!--
+               replace svg image with a fa icon
+               <i class="fa fa-pencil visible-xs"><span class="sr-only">signature</span></i>
+                -->
+               <h2>Signatures</h2>
+               <p>
+                 10h40 - City Hall, Gent </br>
+                 We trouwen om 10h40 in het stadhuis. U bent van harte welkom om deze signeer sessie bij te wonen.
+               </p>
+             </li>
+
+             <!-- TO DO /* hide when col-xs */ -->
+              <li class="col-xs-0 col-sm-12"><hr class="hidden-xs" /></li>
+
+             <li class="col-xs-12 col-sm-6 col-md-3 text-xs-left text-sm-center">
+              <img  class="img-responsive hidden-xs" src="icons/ceremony.svg">
+              <h2>Ceremony</h2>
+              <p>
+                15h20 - Red Loft, Gent </br>
+                Vanaf 15h20 vieren Katrien en Tanguy verder in de Red Loft, te Gent. Indien u een uitnodiging kreeg bent u van harte welkom!
+              </p>
+            </li>
+
+            <li class="col-xs-12 col-sm-6 col-md-3 text-xs-left text-sm-center">
+              <img class="img-responsive hidden-xs" src="icons/reception.svg">
+              <h2>Reception</h2>
+              <p>
+                16h20 - Red Loft, Gent </br>
+                We heffen het glas, gooien met Kubb, en wagen ons aan een sociaal verantwoord gesprek met uw favoriete nog niet te dronken nonkel Roger
+              </p>
+            </li>
+
+            <li class="col-xs-12 col-sm-6 col-md-3 text-xs-left text-sm-center">
+              <img  class="img-responsive hidden-xs" src="icons/dinner.svg">
+              <h2>Dinner</h2>
+              <p>
+                  19h20 - Red Loft, Gent </br>
+                  In selecte kring tafelen we rechtstaand. 't is eens wat anders. We eten en drinken ons dan weer te pletter.
+              </p>
+            </li>
+
+
+              <li class="col-xs-12 col-sm-6 col-md-3 text-xs-left text-sm-center">
+    						<img  class="img-responsive hidden-xs" src="icons/party.svg">
+    						<h2>Party</h2>
+                <p>
+                    21h20 - Red Loft, Gent </br>
+                    In een zatte kring dansen we tot in de vroege uurtjes... met een glas in de hand tot zeker tien na middernacht.
+              </p>
+              </li>
+    			</ul>
+
+    </section>
+
+<!-- add space -->
+<div class="devider"></div>
+
+
+    <section class="container-fluid" id="where">
+      <div id='map' class=""></div>
+    </section><!-- /.where -->
+
+<!-- add space -->
+<div class="devider"></div>
+
+
+<section class="container" id="what">
+  <ul class="items">
+    <li class="col-xs-12 col-sm-6 text-sm-center text-xs-left">
+      <img  class="img-responsive hidden-xs" src="icons/dinner.svg">
+        <h2>Dresscode</h2>
+        <p>
+          dress to impress, en als je iets anders wilt doen, go ahead!
+        </p>
+      </li>
+
+
+        <li class="col-xs-12 col-sm-6 text-xs-left text-sm-center">
+          <img  class="img-responsive hidden-xs" src="icons/party.svg"></br>
+          <h2>Registry</h2>
+          <p>
+            een lijst hebben we niet... plannen daarentegen bij de vleet.
+            gezien we onze huwelijksreis haalbaar kunnen boeken in 2017 kunnen we deze nog rustig vorm geven. uw tips zijn meer dan welkom (pun indtended)
+          </p>
+        </li>
+    </ul>
+</section><!-- /.what -->
+
+</div> <!-- /parallax 1 -->
+
+<div class="">
+<footer>
+  <div class="container-fluid credits">
+      <p>
+        <i class="fa fa-code" aria-hidden="true"><span class="sr-only">code</span></i> with
+       <i class="fa fa-coffee" aria-hidden="true"><span class="sr-only">coffee</span></i> and
+       <i class="fa fa-heart-o" aria-hidden="true"><span class="sr-only">love</span></i> by
+       <i class="fa fa-birthday-cake" aria-hidden="true"><span class="sr-only">webtaart</span></i></br>
+       <a href="http://www.webtaart.be" target="_blank">webtaart.be</a>
+    </p>
+  </div>
+</footer>
+</div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/init.js"></script>
+
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.18.0/mapbox-gl.js'></script>
+    <script src="js/mapbox.js"></script>
+
+    <script src="js/parallax.js"></script>
+
+
+  </body>
+</html>
